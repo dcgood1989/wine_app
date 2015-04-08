@@ -20,6 +20,6 @@
             = link_to winery.winery_name, winery_path(winery)
 
           %td
-            = link_to "Delete", winery_path(winery), class: "btn btn-danger",  method: :delete, data: {confirm: "Are you sure"}
+            = link_to "Delete", winery_path(winery), method: :delete 
           %td
             = link_to "Edit Winery", edit_winery_path(winery), class: "btn btn-primary pull-right"

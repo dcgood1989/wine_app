@@ -6,3 +6,6 @@
   .row
     .col-md-3
       %p.lead= image_tag("wine1.jpg", class:"img-responsive")
+
+      = link_to "Delete", winery_path(Winery.first), method: "delete"
+      = link_to "Delete User", user_path(User.first), method: :delete
