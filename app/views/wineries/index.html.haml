@@ -1,0 +1,25 @@
+.container
+  =link_to "New Winery", new_winery_path, class: "btn btn-danger margin-top-button pull-right"
+  %h1
+    #{current_user.full_name} Wineries
+
+
+
+
+
+  %table.table
+    %thead
+      %tr
+        %th
+          Winery Name
+    %tbody
+
+      - @wineries.each do |winery|
+        %tr
+          %td
+            = link_to winery.winery_name, winery_path(winery)
+
+          %td
+            = link_to "Delete", winery_path(winery), class: "btn btn-danger",  method: :delete, data: {confirm: "Are you sure"}
+          %td
+            = link_to "Edit Winery", edit_winery_path(winery), class: "btn btn-primary pull-right"
